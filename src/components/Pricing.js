@@ -9,9 +9,11 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 function MorphText({ variants, active, className = '' }) {
   const [widths, setWidths] = useState([]);
   const refs = useRef([]);
+  const variantsKey = variants.join('|');
   useEffect(() => {
     setWidths(refs.current.map(el => el ? el.getBoundingClientRect().width : 0));
-  }, [variants.join('|')]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [variantsKey]);
   const current = Math.min(active, variants.length - 1);
   const w = widths.length ? widths[current] : undefined;
   return (

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.f6e19f83.css",
-    "main.js": "/static/js/main.79d4cfee.js",
+    "main.js": "/static/js/main.e2200364.js",
     "static/media/UniversalSans_Display_550-s.p.1d_5desmfkuzx.woff2": "/static/media/UniversalSans_Display_550-s.p.1d_5desmfkuzx.be62fc0c5c4caccd75e1.woff2",
     "static/media/UniversalSans_Text_550-s.p.2oz54pkhn1rbr.woff2": "/static/media/UniversalSans_Text_550-s.p.2oz54pkhn1rbr.0fb47bb9ac212b36c480.woff2",
     "static/media/UniversalSans_Display_400-s.p.0wwhol2x4qvj6.woff2": "/static/media/UniversalSans_Display_400-s.p.0wwhol2x4qvj6.b783633a23ed96b619aa.woff2",
     "static/media/UniversalSans_Text_400-s.p.0kzgqcuw2bgx3.woff2": "/static/media/UniversalSans_Text_400-s.p.0kzgqcuw2bgx3.21a20edc6bc813ff7d3c.woff2",
     "index.html": "/index.html",
     "main.f6e19f83.css.map": "/static/css/main.f6e19f83.css.map",
-    "main.79d4cfee.js.map": "/static/js/main.79d4cfee.js.map"
+    "main.e2200364.js.map": "/static/js/main.e2200364.js.map"
   },
   "entrypoints": [
     "static/css/main.f6e19f83.css",
-    "static/js/main.79d4cfee.js"
+    "static/js/main.e2200364.js"
   ]
 }

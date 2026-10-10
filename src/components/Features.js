@@ -444,21 +444,23 @@ function FeatureCard3() {
 }
 
 /* Avatar Row with expansion animation — source-faithful */
+const AVATAR_ROW_AGENTS = [
+  { name: 'Research', color: '#54B9A6', label: 'Asking Research…', bgColor: 'color-mix(in srgb, var(--color-brand-cyan-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-cyan-300)' },
+  { name: 'Comms', color: '#885CF5', label: 'Looping in Comms…', bgColor: 'color-mix(in srgb, var(--color-brand-violet-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-violet-300)' },
+  { name: 'Chief', color: '#EA4045', label: 'Sending to Chief…', bgColor: 'color-mix(in srgb, var(--color-brand-red-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-red-300)' },
+  { name: 'Travel', color: '#F19D38', label: 'Pinging Travel…', bgColor: 'color-mix(in srgb, var(--color-brand-yellow-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-yellow-300)' },
+];
+
 function AvatarRow() {
   const [activeIdx, setActiveIdx] = useState(0); // Source: first pill (Research) is data-open="true"
-  const agents = [
-    { name: 'Research', color: '#54B9A6', label: 'Asking Research…', bgColor: 'color-mix(in srgb, var(--color-brand-cyan-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-cyan-300)' },
-    { name: 'Comms', color: '#885CF5', label: 'Looping in Comms…', bgColor: 'color-mix(in srgb, var(--color-brand-violet-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-violet-300)' },
-    { name: 'Chief', color: '#EA4045', label: 'Sending to Chief…', bgColor: 'color-mix(in srgb, var(--color-brand-red-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-red-300)' },
-    { name: 'Travel', color: '#F19D38', label: 'Pinging Travel…', bgColor: 'color-mix(in srgb, var(--color-brand-yellow-550) 32%, var(--color-theme-bg))', textColor: 'var(--color-brand-yellow-300)' },
-  ];
+  const agents = AVATAR_ROW_AGENTS;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIdx(prev => (prev + 1) % agents.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [agents.length]);
 
   return (
     <ul className="avatar-row" aria-hidden="true" style={{'--avatar-row-size': '2rem', '--avatar-row-morph': '400ms'}}>

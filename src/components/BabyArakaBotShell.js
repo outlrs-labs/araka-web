@@ -157,11 +157,6 @@ const MonitorIcon = () => (
     <rect x="2" y="3" width="12" height="8" rx="1.5" /><path d="M6 13.5h4M8 11v2.5" />
   </svg>
 );
-const SpinnerIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-    <path d="M8 1.5A6.5 6.5 0 1 1 1.5 8" />
-  </svg>
-);
 
 function BabyArakaBotShell() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -420,7 +415,6 @@ function ComputerPortal() {
 }
 
 function SidebarContent({ bots, activeIndex, onSelect, collapsed }) {
-  const activeBot = bots[activeIndex];
   return (
     <>
       {/* Header - empty when collapsed */}
